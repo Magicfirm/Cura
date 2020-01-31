@@ -169,8 +169,12 @@ else:
 # is a race condition between Arcus and PyQt. Importing Arcus
 # first seems to prevent Sip from going into a state where it
 # tries to create PyQt objects on a non-main thread.
-import Arcus #@UnusedImport
-import Savitar #@UnusedImport
+import Arcus
+import Savitar
+
+a = Arcus.Error
+b = Savitar.MeshData
+
 from cura.CuraApplication import CuraApplication
 
 
