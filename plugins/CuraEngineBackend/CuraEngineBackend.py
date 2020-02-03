@@ -55,6 +55,9 @@ class CuraEngineBackend(QObject, Backend):
         if Platform.isWindows():
             executable_name += ".exe"
         default_engine_location = executable_name
+
+        print("!!!!!!!!! aaaaaaa = ", CuraApplication.getInstallPrefix())
+
         if os.path.exists(os.path.join(CuraApplication.getInstallPrefix(), "bin", executable_name)):
             default_engine_location = os.path.join(CuraApplication.getInstallPrefix(), "bin", executable_name)
         if hasattr(sys, "frozen"):
